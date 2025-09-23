@@ -1,0 +1,116 @@
+.container {
+   height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+  background-image: url('../../assets/Background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Floating icons */
+.icons {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.icon {
+  position: absolute;
+  font-size: 28px;
+  color: white;
+  opacity: 0.9;
+  pointer-events: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.3);
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6))
+          drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+  opacity: 1;
+}
+
+/* Center card */
+.card {
+  background: transparent;
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.logoIcon {
+  font-size: 22px;
+  color: white;
+}
+
+.logoText {
+  font-size: 20px;
+}
+
+.subtitle {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 6px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 6px 0 20px;
+}
+
+.roleBtn {
+  display: block;
+  width: 260px;
+  padding: 12px;
+  margin: 8px auto;
+  border-radius: 6px;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  background: #ffffff;
+  color: #333;
+  cursor: pointer;
+}
+
+.actionBtns {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.signupBtn {
+  padding: 10px 24px;
+  border-radius: 6px;
+  border: none;
+  background: #00c97c;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.loginBtn {
+  padding: 10px 24px;
+  border-radius: 6px;
+  border: none;
+  background: #ffffff;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+}

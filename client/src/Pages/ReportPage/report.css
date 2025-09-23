@@ -1,0 +1,206 @@
+.reportsCourtHeader {
+  margin-bottom: 36px;
+}
+
+.reportsCourtHeader h2 {
+  font-size: 25px;
+  font-weight: 600;
+  color: #abac97;
+}
+.reportsPageContainer {
+  margin-left: 240px; /* Account for fixed sidebar width */
+  padding: 32px;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #1a202c;
+}
+
+/* Header */
+.reportsTopHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.reportsTopHeader h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.reportsTopNav span {
+  margin: 0 12px;
+  cursor: pointer;
+  color: #374151;
+}
+
+.reportsTopNav .reportsActive {
+  border-bottom: 2px solid #10b981;
+  padding-bottom: 4px;
+  color: #10b981;
+}
+
+/* Booking Overview */
+.reportsOverviewSection h3 {
+  font-size: 16px;
+  color: #059669;
+  margin-bottom: 12px;
+}
+
+.reportsOverviewCards {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.reportsCard {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  flex: 1;
+}
+
+.reportsCard p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.reportsCard h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 4px;
+  color: #059669;
+}
+
+/* Booking Trends */
+.reportsTrendsSection h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.reportsMonthly {
+  font-size: 14px;
+  margin: 0;
+}
+
+.reportsSubtext {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+.reportsPositive {
+  color: #059669;
+  font-weight: 600;
+  display: flex;
+  font-size: 25px;
+  margin-top: 10px;
+}
+.reportsPositive2 {
+  color: #059669;
+  font-weight: 600;
+}
+/* Fake Graph (placeholder) */
+.reportsTrendGraph {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 150px;
+  border-bottom: 1px solid #d1d5db;
+  padding: 0 8px;
+}
+
+.reportsMonth {
+  font-size: 13px;
+  color: #374151;
+}
+@media (max-width: 1024px) {
+   .reportsPageContainer {
+    margin-left: 200px; /* adjust sidebar space */
+  }
+
+  .reportsOverviewCards {
+    flex-wrap: wrap;
+  }
+
+  .reportsCard {
+    flex: 1 1 45%; /* two cards per row */
+  }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  .reportsPageContainer {
+    margin-left: 0;   /* remove sidebar offset */
+    padding: 16px;
+    width: 100%;      /* full width */
+  }
+
+  .reportsTopHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .reportsOverviewCards {
+    flex-direction: column;
+  }
+
+  .reportsCard {
+    flex: 1 1 100%;
+  }
+
+  .reportsCourtHeader h2 {
+    font-size: 20px;
+  }
+
+  .reportsTopHeader h2 {
+    font-size: 18px;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+    .reportsPageContainer {
+    margin-left: 0;   /* no sidebar offset */
+    padding: 12px;
+    width: 100%;      /* always full width */
+  }
+
+  .reportsOverviewCards {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .reportsCard {
+    width: 100%;   /* make each card stretch full width */
+  }
+
+  .reportsTrendsSection h3 {
+    font-size: 14px;
+  }
+
+  .reportsMonthly,
+  .reportsSubtext {
+    font-size: 12px;
+  }
+  .reportsCourtHeader h2 {
+    font-size: 18px;
+  }
+
+  .reportsCard h2 {
+    font-size: 20px;
+  }
+
+  .reportsPositive {
+    font-size: 18px;
+  }
+
+  .reportsTopNav span {
+    margin: 0 8px;
+    font-size: 13px;
+  }
+}

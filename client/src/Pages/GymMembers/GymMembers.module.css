@@ -1,0 +1,705 @@
+/* Container Styles */
+.dashboard {
+  margin-left: 220px; /* Account for fixed sidebar width */
+  padding: 32px;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    sans-serif;
+}
+
+/* Main Content Styles */
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.header {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1rem 2rem;
+}
+
+.headerTitle {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #52946b;
+  letter-spacing: 0.025em;
+}
+
+.content {
+  flex: 1;
+}
+
+.contentContainer {
+  padding: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Tabs Styles */
+.tabs {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.tab {
+  font-size: 15px;
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.tabActive {
+  color: #0d9488;
+  border-bottom-color: #0d9488;
+}
+
+.tabInactive {
+  color: #6b7280;
+}
+
+.tabInactive:hover {
+  color: #374151;
+}
+
+/* Search Bar Styles */
+.searchContainer {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  border-radius: 8px;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  background-color: #d1e5d9;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.searchInput:focus {
+  box-shadow: 0 0 0 2px #14b8a6;
+  border-color: transparent;
+}
+
+/* Table Styles */
+.tableContainer {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableHeader {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tableHeaderCell {
+  text-align: left;
+  padding: 1rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.tableRow {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background-color 0.2s ease;
+}
+
+.tableRow:hover {
+  background-color: #f9fafb;
+}
+
+.tableCell {
+  padding: 1rem;
+  color: #6b7280;
+}
+
+.tableCellName {
+  color: #1f2937;
+}
+
+/* Status Styles */
+.statusContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.statusBadge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.statusActive {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.statusExpired {
+  background-color: #fecaca;
+  color: #991b1b;
+}
+
+.renewButton {
+  padding: 0.25rem 1rem;
+  background-color: #10b981;
+  color: white;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.renewButton:hover {
+  background-color: #059669;
+}
+
+/* Action Buttons - Updated and Enhanced */
+.actionButtons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Base action button styling */
+.actionButton {
+  padding: 6px 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  min-width: 32px;
+  height: 32px;
+}
+
+.actionButton:hover {
+  transform: translateY(-1px);
+}
+
+.actionButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.actionButton:disabled:hover {
+  background: transparent;
+}
+
+/* WhatsApp Message Button */
+.actionButtonMessage {
+  background-color: #dcfce7;
+}
+
+.actionButtonMessage:hover {
+  background-color: #bbf7d0;
+}
+
+/* Upload Button */
+.actionButtonUpload {
+  background-color: #dbeafe;
+}
+
+.actionButtonUpload:hover {
+  background-color: #bfdbfe;
+}
+
+/* Preview Button - New */
+.actionButtonPreview {
+  background-color: #fed7aa;
+}
+
+.actionButtonPreview:hover {
+  background-color: #fdba74;
+}
+
+/* Delete Button - New */
+.actionButtonDelete {
+  background-color: #fecaca;
+}
+
+.actionButtonDelete:hover {
+  background-color: #fca5a5;
+}
+
+.searchselect {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* styles.module.css */
+
+.selectmembers {
+  position: relative;
+  display: inline-block;
+  min-width: 200px;
+}
+
+select option {
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  background-color: #d1e5d9;
+}
+
+.selectmembers select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #d1e5d9;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s ease;
+
+  /* Remove default arrow */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* Add custom arrow */
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+.selectmembers select:hover {
+  border-color: #007bff;
+}
+
+.selectmembers select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* Limited styling for options (browser dependent) */
+.selectoption {
+  padding: 12px 16px;
+  background-color: #d1e5d9;
+  color: #333;
+  border-radius: 8px;
+}
+
+.selectoption:hover {
+  background-color: #f8f9fa;
+}
+
+.selectoption:checked,
+.selectoption:focus {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Disabled state */
+.selectmembers select:disabled {
+  background-color: #f5f5f5;
+  color: #999;
+  cursor: not-allowed;
+  border-color: #ddd;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #444;
+}
+
+.pagination button {
+  background-color: #f1f5f9;
+  border: 1px solid #d1d5db;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+.pagination button:hover {
+  background-color: #e2e8f0;
+}
+
+.pagination button:disabled {
+  background-color: #f9fafb;
+  border-color: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-weight: 500;
+  color: #111827;
+}
+
+/* Diet Plan Status Styles */
+.dietPlanStatus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dietPlanAssigned {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dietPlanBadge {
+  background-color: #10b981;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.noDietPlan {
+  color: #6b7280;
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* Loading Spinners */
+.uploadingSpinner,
+.deletingSpinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.deletingSpinner {
+  border-top-color: #e74c3c;
+}
+.modalContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Profile Header Styles */
+.profileHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.modalimage {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e5e7eb;
+}
+
+.noProfileImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.userInfo {
+  flex: 1;
+}
+
+.userName {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+}
+
+.userType {
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+}
+
+.userLocation {
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+/* Details Section Styles */
+.detailsSection {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #374151;
+}
+
+.detailsSection p {
+  margin-bottom: 0.75rem;
+}
+
+/* Status Styles for Modal */
+.successstatus {
+  background-color: #dcfce7;
+  color: #166534;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.expiredstatus {
+  background-color: #fecaca;
+  color: #991b1b;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* PDF Section Styles */
+.pdfSection {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1rem;
+}
+
+.pdfSectionTitle {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #1f2937;
+}
+
+.pdfList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pdfItem {
+  background-color: #f9fafb;
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  transition: background-color 0.2s ease;
+}
+
+.pdfItem:hover {
+  background-color: #f3f4f6;
+}
+
+.pdfHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.pdfTitle {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.deleteButton {
+  padding: 0.5rem;
+  color: #ef4444;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deleteButton:hover {
+  color: #dc2626;
+  background-color: #fef2f2;
+}
+
+.deleteButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.pdfLink {
+  color: #2563eb;
+  text-decoration: underline;
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+}
+
+.pdfLink:hover {
+  color: #1d4ed8;
+}
+
+.noPdfsMessage {
+  color: #6b7280;
+  font-size: 0.875rem;
+  background-color: #f9fafb;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+}
+
+/* View Button Styles */
+.actionButtonView {
+  background-color: #f3f4f6;
+}
+
+.actionButtonView:hover {
+  background-color: #e5e7eb;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .contentContainer {
+    padding: 1.5rem;
+  }
+
+  .tableContainer {
+    overflow-x: scroll;
+  }
+
+  .table {
+    min-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contentContainer {
+    padding: 1rem;
+  }
+
+  .headerTitle {
+    font-size: 1.5rem;
+  }
+
+  .tabs {
+    gap: 1rem;
+  }
+
+  .header {
+    padding: 1rem;
+  }
+
+  .actionButtons {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  
+  .actionButton {
+    min-width: 28px;
+    height: 28px;
+    padding: 4px 6px;
+  }
+}
+
+@media (max-width: 640px) {
+  .contentContainer {
+    padding: 0.5rem;
+  }
+
+  .actionButtons {
+    gap: 0.25rem;
+  }
+
+  .statusContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .renewButton {
+    font-size: 0.75rem;
+    padding: 0.125rem 0.5rem;
+  }
+}
+
+/* Scrollbar Styling */
+.content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.content::-webkit-scrollbar-track {
+  background: #f3f4f6;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+.tableContainer::-webkit-scrollbar {
+  height: 6px;
+}
+
+.tableContainer::-webkit-scrollbar-track {
+  background: #f3f4f6;
+}
+
+.tableContainer::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+
+.tableContainer::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}

@@ -1,0 +1,817 @@
+/* Container Styles */
+.dashboard {
+  margin-left: 220px; /* Account for fixed sidebar width */
+  padding: 32px;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    sans-serif;
+}
+
+/* Main Content Styles */
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.header {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1rem 2rem;
+}
+
+.headerTitle {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #52946b;
+  letter-spacing: 0.025em;
+}
+
+.content {
+  flex: 1;
+}
+
+.contentContainer {
+  padding: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Tabs Styles */
+.tabs {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.tab {
+  font-size: 15px;
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.tabActive {
+  color: #0d9488;
+  border-bottom-color: #0d9488;
+}
+
+.tabInactive {
+  color: #6b7280;
+}
+
+.tabInactive:hover {
+  color: #374151;
+}
+
+/* Search Bar Styles */
+.searchContainer {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  border-radius: 8px;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  background-color: #d1e5d9;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.searchInput:focus {
+  box-shadow: 0 0 0 2px #14b8a6;
+  border-color: transparent;
+}
+
+/* Table Styles */
+.tableContainer {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableHeader {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tableHeaderCell {
+  text-align: left;
+  padding: 1rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.tableRow {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background-color 0.2s ease;
+}
+
+.tableRow:hover {
+  background-color: #f9fafb;
+}
+
+.tableCell {
+  padding: 1rem;
+  color: #6b7280;
+}
+
+.tableCellName {
+  color: #1f2937;
+}
+
+/* Status Styles */
+.statusContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.statusBadge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.statusActive {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.statusExpired {
+  background-color: #fecaca;
+  color: #991b1b;
+}
+
+.renewButton {
+  padding: 0.25rem 1rem;
+  background-color: #10b981;
+  color: white;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.renewButton:hover {
+  background-color: #059669;
+}
+
+/* Action Buttons */
+.actionButtons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.actionButton {
+  padding: 0.5rem;
+  color: #6b7280;
+  background: none;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.editButton {
+  padding: 0.5rem;
+  color: #31549e;
+  background: none;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.deleteButton {
+  padding: 0.5rem;
+  color: red;
+  background: none;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.actionButton:hover {
+  background-color: #f3f4f6;
+}
+
+.actionButtonEdit:hover {
+  color: #2563eb;
+  background-color: #dbeafe;
+}
+
+.actionButtonDelete:hover {
+  color: #dc2626;
+  background-color: #fecaca;
+}
+
+.actionButtonMessage:hover {
+  color: #16a34a;
+  background-color: #dcfce7;
+}
+
+.actionButtonView:hover {
+  color: #374151;
+  background-color: #f3f4f6;
+}
+
+/* Form Styles */
+.formWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.formContainer {
+  background: #d1e5d9;
+  border-radius: 1rem;
+  padding: 3rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.formTitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1f2937;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 20px;
+}
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sectionLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+}
+
+.billingRow {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 3rem;
+  padding: 8px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formInput,
+.formSelect {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #0d9488;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: all 0.2s ease;
+  background-color: #d1e5d9;
+  font-size: 0.875rem;
+}
+
+.formInput:focus,
+.formSelect:focus {
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+}
+
+.formInput::placeholder {
+  color: #374151;
+}
+
+.formTextarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #0d9488;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: all 0.2s ease;
+  background-color: #d1e5d9;
+  resize: vertical;
+  font-family: inherit;
+  font-size: 0.875rem;
+  min-height: 80px;
+}
+
+.formTextarea:focus {
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+}
+
+.formTextarea::placeholder {
+  color: #374151;
+}
+
+/* Form Buttons */
+.formButtons {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.submitButton {
+  background-color: #10b981;
+  color: white;
+  padding: 0.75rem 3rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
+}
+
+.submitButton:hover {
+  background-color: #059669;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
+}
+
+.submitButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.3);
+}
+
+.searchselect {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* styles.module.css */
+
+.selectmembers {
+  position: relative;
+  display: inline-block;
+  min-width: 200px;
+  margin-left: 10px;
+}
+
+select option {
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  background-color: #d1e5d9;
+}
+
+.selectmembers select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #d1e5d9;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s ease;
+
+  /* Remove default arrow */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* Add custom arrow */
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+.selectmembers select:hover {
+  border-color: #007bff;
+}
+
+.selectmembers select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* Limited styling for options (browser dependent) */
+.selectoption {
+  padding: 12px 16px;
+  background-color: #d1e5d9;
+  color: #333;
+  border-radius: 8px;
+}
+
+.selectoption:hover {
+  background-color: #f8f9fa;
+}
+
+.selectoption:checked,
+.selectoption:focus {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Disabled state */
+.selectmembers select:disabled {
+  background-color: #f5f5f5;
+  color: #999;
+  cursor: not-allowed;
+  border-color: #ddd;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #444;
+}
+
+.pagination button {
+  background-color: #f1f5f9;
+  border: 1px solid #d1d5db;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+.pagination button:hover {
+  background-color: #e2e8f0;
+}
+
+.pagination button:disabled {
+  background-color: #f9fafb;
+  border-color: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-weight: 500;
+  color: #111827;
+}
+
+.noUsersMessage {
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #555;
+}
+
+.editModal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 20px;
+  width: 700px;
+}
+
+.cancelButton {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.cancelButton:hover {
+  background-color: #e0e0e0;
+}
+
+.modalContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+}
+
+.profileHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb; /* gray-200 */
+}
+
+.profileImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.noImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #f3f4f6; /* gray-100 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280; /* gray-500 */
+  font-size: 14px;
+}
+
+.userInfo h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.userInfo p {
+  margin: 2px 0;
+  font-size: 14px;
+  color: #6b7280; /* gray-600 */
+}
+
+.detailsSection {
+  margin-top: 16px;
+  width: 100%;
+  color: #374151; /* gray-700 */
+  font-size: 14px;
+}
+
+.detailsSection p {
+  margin: 6px 0;
+}
+
+.pdfList {
+  margin-left: 20px;
+  margin-top: 6px;
+}
+
+.pdfLink {
+  color: #2563eb; /* blue-600 */
+  text-decoration: none;
+}
+
+.pdfLink:hover {
+  text-decoration: underline;
+}
+
+.modalimage {
+  width: 180px;
+  height: 120px;
+  border-radius: 10px;
+}
+
+.successstatus {
+  color: green;
+}
+
+.expiredstatus {
+  color: red;
+}
+
+.fileupload {
+  background-color: #10b981;
+  margin-bottom: 15px;
+}
+
+.deletediet {
+  color: red;
+}
+.pdfList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Space between cards */
+  list-style: none; /* Remove default bullets */
+  margin-left: 0;
+  margin-top: 8px;
+  padding: 0;
+}
+
+/* Individual List Item - Full width for card */
+.pdfListItem {
+  width: 100%;
+  margin: 0;
+}
+
+/* PDF Card - Main card container */
+.pdfCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Pushes link and button to opposite sides */
+  gap: 16px; /* Space between link and button */
+  background-color: #ffffff; /* White background */
+  border: 1px solid #e2e8f0; /* Light border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 12px 16px; /* Inner padding for breathing room */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: all 0.2s ease-in-out; /* Smooth hover transition */
+  min-height: 48px; /* Minimum height for consistent appearance */
+}
+
+/* Hover effect for card */
+.pdfCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Elevated shadow on hover */
+  border-color: #cbd5e1; /* Slightly darker border on hover */
+  transform: translateY(-1px); /* Subtle lift effect */
+}
+
+/* PDF Link - Styled link with spacing */
+.pdfLink {
+  flex: 1; /* Takes available space */
+  color: #3b82f6; /* Blue color */
+  text-decoration: none;
+  font-weight: 500;
+  padding: 4px 0; /* Vertical padding for click area */
+  transition: color 0.2s ease;
+}
+
+.pdfLink:hover {
+  color: #1d4ed8; /* Darker blue on hover */
+  text-decoration: underline;
+}
+
+/* Delete Button - Styled button with icon spacing */
+.deleteButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 32px; /* Ensures icon has space */
+  height: 32px; /* Square button for icon */
+}
+
+.deleteButton:hover {
+  background-color: #fee2e2; /* Light red background on hover */
+  color: #dc2626; /* Darker red */
+}
+
+.deleteButton:active {
+  transform: scale(0.95); /* Subtle press effect */
+}
+
+/* Delete Icon - Specific styling for Trash2 */
+.deletediet {
+  width: 18px;
+  height: 18px;
+  color: #ef4444; /* Red color for delete icon */
+  stroke-width: 2;
+}
+/* Responsive Design */
+@media (min-width: 768px) {
+  .formRow {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contentContainer {
+    padding: 1.5rem;
+  }
+
+  .tableContainer {
+    overflow-x: scroll;
+  }
+
+  .table {
+    min-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contentContainer {
+    padding: 1rem;
+  }
+
+  .headerTitle {
+    font-size: 1.5rem;
+  }
+
+  .tabs {
+    gap: 1rem;
+  }
+
+  .header {
+    padding: 1rem;
+  }
+
+  .formWrapper {
+    max-width: 100%;
+  }
+
+  .formContainer {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .contentContainer {
+    padding: 0.5rem;
+  }
+
+  .actionButtons {
+    gap: 0.25rem;
+  }
+
+  .statusContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .renewButton {
+    font-size: 0.75rem;
+    padding: 0.125rem 0.5rem;
+  }
+
+  .formButtons {
+    flex-direction: column;
+  }
+
+  .formContainer {
+    padding: 1rem;
+  }
+}
+
+/* Scrollbar Styling */
+.content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.content::-webkit-scrollbar-track {
+  background: #f3f4f6;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+.tableContainer::-webkit-scrollbar {
+  height: 6px;
+}
+
+.tableContainer::-webkit-scrollbar-track {
+  background: #f3f4f6;
+}
+
+.tableContainer::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+
+.tableContainer::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}

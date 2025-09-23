@@ -1,0 +1,176 @@
+.container {
+  margin-left: 240px;
+  max-width: 600px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #2f4f4f;
+}
+
+.heading {
+  color: #4caf50;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.subheading {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.spacer {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+input {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+input:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+.button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+.button:disabled {
+  background-color: #a5d6a7;
+  cursor: not-allowed;
+}
+
+.button:hover:enabled {
+  background-color: #45a049;
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tabBtn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  background: #f5f5f5;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.tabBtn:hover {
+  background: #a5d6a7;
+  color: #000;
+}
+
+.active {
+  background: #45a049;
+  color: white;
+  border-color: #45a049;
+}
+
+.listItems {
+  margin-left: 240px;
+  max-width: 100%;
+  padding: 20px;
+}
+
+.listItems h3 {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  color: #45a049;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.table th {
+  background: #f5f5f5;
+  font-weight: 600;
+}
+
+.table th,
+.table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.modalActions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.cancelBtn {
+  background: #ccc;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.deleteBtn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
