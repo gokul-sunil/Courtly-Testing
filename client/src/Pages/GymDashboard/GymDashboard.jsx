@@ -1,5 +1,6 @@
 import styles from './GymDashboard.module.css';
 import React, { useState, useEffect } from 'react';
+import baseUrl from "../../baseUrl"
 
 function GymDashboard() {
     const [gymStats, setGymStats] = useState({
@@ -23,10 +24,10 @@ function GymDashboard() {
             
             // Try different possible API endpoints with correct v1 path
             const possibleEndpoints = [
-                'http://localhost:8000/api/v1/gym/full-statistics',
-                'http://localhost:8000/api/v1/gym/statistics',
-                'http://localhost:8000/api/gym/full-statistics',
-                'http://localhost:8000/gym/full-statistics'
+                `${baseUrl}/api/v1/gym/full-statistics`,
+                // 'http://localhost:8000/api/v1/gym/statistics',
+                // 'http://localhost:8000/api/gym/full-statistics',
+                // 'http://localhost:8000/gym/full-statistics'
             ];
             
             let response;
