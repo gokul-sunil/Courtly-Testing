@@ -25,9 +25,9 @@ function GymDashboard() {
             // Try different possible API endpoints with correct v1 path
             const possibleEndpoints = [
                 `${baseUrl}/api/v1/gym/full-statistics`,
-                // 'http://localhost:8000/api/v1/gym/statistics',
-                // 'http://localhost:8000/api/gym/full-statistics',
-                // 'http://localhost:8000/gym/full-statistics'
+                `${baseUrl} />/api/v1/gym/statistics`,
+                `${baseUrl}/api/gym/full-statistics`,
+                `${baseUrl}/gym/full-statistics`
             ];
             
             let response;
